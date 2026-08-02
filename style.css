@@ -1,0 +1,52 @@
+body{
+    margin:0;
+    padding:0;
+    background:linear-gradient(135deg,#071A3D,#102B63);
+    font-family:Arial,Helvetica,sans-serif;
+    color:white;
+    text-align:center;
+}
+
+.container{
+    padding:25px;
+}
+
+h1{
+    color:#FFD700;
+    font-size:34px;
+}
+
+h2{
+    color:white;
+    margin-bottom:20px;
+}
+
+.invite{
+    width:95%;
+    max-width:650px;
+    border-radius:18px;
+    box-shadow:0 0 25px rgba(255,215,0,.5);
+}
+
+button{
+    margin-top:20px;
+    background:#FFD700;
+    color:#071A3D;
+    border:none;
+    padding:15px 28px;
+    border-radius:40px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+#countdown{
+    margin-top:25px;
+    font-size:24px;
+    color:#FFD700;
+    font-weight:bold;
+}
