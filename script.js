@@ -133,7 +133,8 @@ window.addEventListener("load",function(){
 
     setTimeout(function(){
 
-        document.getElementById("loader").style.display="none";
+        document.getElementById("loader")
+        .classList.add("hide");
 
     },2000);
 
