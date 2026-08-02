@@ -15,7 +15,11 @@ body{
 
 }
 
+body.viewer-open{
 
+    overflow:hidden;
+
+}
 /* OPENING */
 
 #opening{
@@ -781,8 +785,7 @@ font-size:22px;
     transform:scale(.98);
 
 }
-/* FULLSCREEN IMAGE VIEWER */
-
+/* FULLSCREEN GALLERY VIEWER */
 
 #imageViewer{
 
@@ -793,12 +796,12 @@ font-size:22px;
     top:0;
     left:0;
 
-    width:100%;
-    height:100%;
+    width:100vw;
+    height:100vh;
 
-    background:rgba(0,0,0,.9);
+    background:rgba(0,0,0,.92);
 
-    z-index:999;
+    z-index:9999;
 
     justify-content:center;
 
@@ -811,18 +814,21 @@ font-size:22px;
 
 #imageViewer img{
 
-    max-width:100%;
+    max-width:95vw;
 
-    max-height:95%;
+    max-height:90vh;
+
+    object-fit:contain;
 
     border:3px solid #D4AF37;
 
-    border-radius:20px;
+    border-radius:15px;
+
+    box-shadow:0 0 40px rgba(212,175,55,.6);
 
     animation:viewerZoom .4s ease;
 
 }
-
 
 
 @keyframes viewerZoom{
