@@ -818,7 +818,8 @@ font-size:22px;
     transform:scale(.98);
 
 }
-/* FULLSCREEN GALLERY VIEWER */
+/* PREMIUM IMAGE GALLERY */
+
 
 #imageViewer{
 
@@ -827,20 +828,95 @@ font-size:22px;
     position:fixed;
 
     top:0;
+
     left:0;
 
     width:100vw;
+
     height:100vh;
 
-    background:rgba(0,0,0,.92);
+    background:rgba(0,0,0,.94);
 
-    z-index:9999;
+    z-index:99999;
 
     justify-content:center;
 
     align-items:center;
 
     padding:20px;
+
+}
+
+
+
+#fullImage{
+
+    max-width:95vw;
+
+    max-height:90vh;
+
+    object-fit:contain;
+
+    border:3px solid #D4AF37;
+
+    border-radius:20px;
+
+    animation:imageZoom .5s ease;
+
+}
+
+
+
+#closeViewer{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    width:50px;
+
+    height:50px;
+
+    padding:0;
+
+    margin:0;
+
+    border-radius:50%;
+
+    background:#D4AF37;
+
+    color:#00163d;
+
+    font-size:35px;
+
+    line-height:40px;
+
+    z-index:100000;
+
+}
+
+
+
+@keyframes imageZoom{
+
+from{
+
+    transform:scale(.7);
+
+    opacity:0;
+
+}
+
+
+to{
+
+    transform:scale(1);
+
+    opacity:1;
+
+}
 
 }
 
