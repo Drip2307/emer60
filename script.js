@@ -69,15 +69,26 @@ setInterval(function(){
 },1000);
 function openImage(image){
 
-    document.getElementById("imageViewer").style.display="flex";
+    let viewer = document.getElementById("imageViewer");
 
-    document.getElementById("fullImage").src=image.src;
+    let fullImage = document.getElementById("fullImage");
+
+
+    fullImage.src = image.src;
+
+    viewer.style.display="flex";
+
+
+    document.body.classList.add("viewer-open");
 
 }
+
 
 
 function closeImage(){
 
     document.getElementById("imageViewer").style.display="none";
+
+    document.body.classList.remove("viewer-open");
 
 }
