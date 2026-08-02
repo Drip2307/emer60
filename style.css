@@ -970,3 +970,47 @@ to{
 }
 
 }
+/* BACK TO TOP BUTTON */
+
+
+#topButton{
+
+    display:none;
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    padding:0;
+
+    margin:0;
+
+    background:#D4AF37;
+
+    color:#001B4D;
+
+    border:2px solid white;
+
+    font-size:28px;
+
+    z-index:1000;
+
+    box-shadow:
+    0 0 25px rgba(212,175,55,.6);
+
+}
+
+
+#topButton:hover{
+
+    transform:scale(1.1);
+
+}
