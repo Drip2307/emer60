@@ -96,17 +96,17 @@ setInterval(function(){
 },1000);
 function openImage(image){
 
-    let viewer = document.getElementById("imageViewer");
+    let viewer=document.getElementById("imageViewer");
 
-    let fullImage = document.getElementById("fullImage");
+    let fullImage=document.getElementById("fullImage");
 
 
-    fullImage.src = image.src;
+    fullImage.src=image.src;
 
     viewer.style.display="flex";
 
 
-    document.body.classList.add("viewer-open");
+    document.body.style.overflow="hidden";
 
 }
 
@@ -116,7 +116,7 @@ function closeImage(){
 
     document.getElementById("imageViewer").style.display="none";
 
-    document.body.classList.remove("viewer-open");
+    document.body.style.overflow="auto";
 
 }
 // BACK TO TOP BUTTON
