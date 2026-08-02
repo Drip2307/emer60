@@ -1,52 +1,139 @@
-body{
+*{
     margin:0;
     padding:0;
-    background:linear-gradient(135deg,#071A3D,#102B63);
+    box-sizing:border-box;
     font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#081C45,#123B84);
     color:white;
+    overflow-x:hidden;
+}
+
+#welcome{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
     text-align:center;
+    padding:20px;
+    background:linear-gradient(135deg,#06193D,#0B2C66);
+}
+
+#welcome h1{
+    color:#FFD700;
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+#welcome p{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+#welcome h2{
+    color:#FFD700;
+    font-size:35px;
+    margin-bottom:35px;
 }
 
 .container{
-    padding:25px;
+    width:90%;
+    max-width:900px;
+    margin:auto;
+    padding:40px 0;
+    text-align:center;
 }
 
-h1{
+.container h1{
     color:#FFD700;
-    font-size:34px;
-}
-
-h2{
-    color:white;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
 .invite{
-    width:95%;
+    width:100%;
     max-width:650px;
-    border-radius:18px;
-    box-shadow:0 0 25px rgba(255,215,0,.5);
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(255,215,0,.45);
+    transition:.4s;
+}
+
+.invite:hover{
+    transform:scale(1.02);
+}
+
+h3{
+    margin-top:20px;
+    font-weight:normal;
+    line-height:1.8;
 }
 
 button{
-    margin-top:20px;
     background:#FFD700;
-    color:#071A3D;
+    color:#081C45;
     border:none;
-    padding:15px 28px;
-    border-radius:40px;
+    border-radius:50px;
+    padding:16px 32px;
     font-size:18px;
     font-weight:bold;
     cursor:pointer;
+    margin-top:25px;
+    transition:.3s;
 }
 
 button:hover{
-    transform:scale(1.05);
+    transform:scale(1.08);
 }
 
 #countdown{
-    margin-top:25px;
-    font-size:24px;
+    margin-top:35px;
+    font-size:28px;
     color:#FFD700;
     font-weight:bold;
+}
+
+footer{
+    margin-top:60px;
+    padding-bottom:30px;
+    opacity:.75;
+}
+
+#mainContent{
+    animation:fade .8s;
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@media(max-width:768px){
+
+#welcome h1{
+font-size:34px;
+}
+
+#welcome h2{
+font-size:28px;
+}
+
+button{
+width:100%;
+}
+
+#countdown{
+font-size:22px;
+}
+
 }
