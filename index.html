@@ -3,34 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>60th Birthday Invitation</title>
+    <title>Emer Gallos 60th Birthday Invitation</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+<div id="welcome">
 
     <h1>🎉 You're Invited 🎉</h1>
 
-    <h2>60th Birthday Celebration</h2>
+    <p>Join us in celebrating the 60th Birthday of</p>
 
-    <img src="file_000000009d1c8230a33bbc6867010639.png" class="invite">
+    <h2>Emer Gallos</h2>
 
-    <h3>📅 August 13, 2026</h3>
-
-    <h3>🕓 4:00 PM</h3>
-
-    <h3>📍 Gallos Residence<br>Brgy. Tagororoc, Nabas, Aklan</h3>
-
-    <button onclick="openMap()">
-        📍 Open Google Maps
+    <button onclick="openInvitation()">
+        Open Invitation
     </button>
 
-    <br><br>
+</div>
 
-    <div id="countdown"></div>
+<div id="mainContent" style="display:none;">
+
+<div class="container">
+
+<h1>60th Birthday Celebration</h1>
+
+<img src="file_000000009d1c8230a33bbc6867010639.png" class="invite" alt="Invitation">
+
+<h3>📅 August 13, 2026</h3>
+
+<h3>🕓 4:00 PM</h3>
+
+<h3>
+📍 Gallos Residence<br>
+Brgy. Tagororoc, Nabas, Aklan
+</h3>
+
+<button onclick="openMap()">
+📍 View Location
+</button>
+
+<br><br>
+
+<div id="countdown"></div>
+
+<br>
+
+<button onclick="shareInvitation()">
+📤 Share Invitation
+</button>
+
+<footer>
+
+Made with ❤️ for Emer Gallos' 60th Birthday
+
+</footer>
+
+</div>
 
 </div>
 
