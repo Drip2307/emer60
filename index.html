@@ -1,21 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Emer Gallos | 60th Birthday Celebration</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-<button onclick="test()">Click Me</button>
+<div class="balloon balloon1"></div>
+<div class="balloon balloon2"></div>
+<div class="balloon balloon3"></div>
 
-<script>
+<section id="opening">
 
-function test(){
+    <div class="opening-card">
 
-alert("WORKING!");
+        <h1>Emer Gallos</h1>
 
-}
+        <h2>60th Birthday Celebration</h2>
 
-</script>
+        <p>
+            August 13, 2026<br>
+            4:00 PM
+        </p>
+
+        <button onclick="openInvitation()">
+            View Invitation
+        </button>
+
+    </div>
+
+</section>
+
+
+<section id="invitation" style="display:none;">
+
+
+<div class="container">
+
+
+<h1>60th Birthday Celebration</h1>
+
+
+<img src="front.png" class="invite-card">
+
+
+<div class="details">
+
+<p>
+August 13, 2026<br>
+4:00 PM
+</p>
+
+
+<p>
+Gallos Residence<br>
+Brgy. Tagororoc<br>
+Nabas, Aklan
+</p>
+
+
+<button onclick="openMap()">
+View Location
+</button>
+
+
+</div>
+
+
+<div id="countdown"></div>
+
+
+<img src="back.png" class="invite-card back">
+
+
+</div>
+
+
+</section>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
