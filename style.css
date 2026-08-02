@@ -255,25 +255,20 @@ button:hover{
 
 
 #countdown{
-
-    margin:35px auto;
-
-    padding:25px;
-
+    width:95%;
     max-width:600px;
+    margin:35px auto;
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#countdown::before{
+    content:"";
+}
 
-    border-radius:25px;
-
-    border:2px solid #D4AF37;
-
-    background:rgba(0,0,0,.25);
-
-    color:#D4AF37;
-
-    font-size:28px;
-
-    font-weight:bold;
-
+#countdown{
+    letter-spacing:1px;
 }
 
 
