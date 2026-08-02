@@ -67,3 +67,17 @@ setInterval(function(){
 
 
 },1000);
+function openImage(image){
+
+    document.getElementById("imageViewer").style.display="flex";
+
+    document.getElementById("fullImage").src=image.src;
+
+}
+
+
+function closeImage(){
+
+    document.getElementById("imageViewer").style.display="none";
+
+}
