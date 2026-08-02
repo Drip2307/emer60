@@ -883,3 +883,90 @@ opacity:1;
 }
 
 }
+/* LUXURY OPENING EFFECT */
+
+
+.opening-card{
+
+    animation:
+    luxuryEnter 1.5s ease,
+    softGlow 3s infinite alternate;
+
+}
+
+
+
+.opening-card h1{
+
+    animation:titleGlow 2s infinite alternate;
+
+}
+
+
+
+@keyframes luxuryEnter{
+
+from{
+
+    opacity:0;
+
+    transform:
+    scale(.85)
+    translateY(40px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:
+    scale(1)
+    translateY(0);
+
+}
+
+}
+
+
+
+@keyframes softGlow{
+
+from{
+
+    box-shadow:
+    0 0 30px rgba(212,175,55,.3);
+
+}
+
+
+to{
+
+    box-shadow:
+    0 0 70px rgba(212,175,55,.7);
+
+}
+
+}
+
+
+
+@keyframes titleGlow{
+
+from{
+
+    text-shadow:
+    0 0 5px #D4AF37;
+
+}
+
+
+to{
+
+    text-shadow:
+    0 0 25px #D4AF37;
+
+}
+
+}
