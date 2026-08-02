@@ -47,7 +47,7 @@
 <h1>60th Birthday Celebration</h1>
 
 
-<img src="front.png" class="invite-card">
+<img src="front.png" class="invite-card" onclick="openImage(this)">
 
 
 <div class="details">
@@ -76,14 +76,18 @@ View Location
 <div id="countdown"></div>
 
 
-<img src="back.png" class="invite-card back">
+<img src="back.png" class="invite-card back" onclick="openImage(this)">
 
 
 </div>
 
 
 </section>
+<div id="imageViewer" onclick="closeImage()">
 
+    <img id="fullImage">
+
+</div>
 
 <script src="script.js"></script>
 
