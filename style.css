@@ -1034,9 +1034,11 @@ to{
 
     align-items:center;
 
-    text-align:center;
-
     z-index:99999;
+
+    opacity:1;
+
+    transition:opacity 1s ease, visibility 1s ease;
 
 }
 
@@ -1155,5 +1157,12 @@ opacity:1;
 transform:scale(1);
 
 }
+
+}
+#loader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
 
 }
