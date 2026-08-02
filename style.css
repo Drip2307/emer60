@@ -717,3 +717,67 @@ font-size:22px;
 }
 
 }
+/* PREMIUM INVITATION REVEAL */
+
+#invitation{
+    animation: revealPage 1.2s ease;
+}
+
+
+@keyframes revealPage{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* GOLD SHINE EFFECT SA TITLE */
+
+.container h1{
+
+    position:relative;
+
+}
+
+
+.container h1::after{
+
+    content:"";
+
+    display:block;
+
+    width:120px;
+
+    height:3px;
+
+    background:#D4AF37;
+
+    margin:15px auto 0;
+
+    border-radius:20px;
+
+}
+
+
+/* MAS LUXURY NA IMAGE EFFECT */
+
+.invite-card{
+
+    cursor:pointer;
+
+}
+
+
+.invite-card:active{
+
+    transform:scale(.98);
+
+}
