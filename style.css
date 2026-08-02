@@ -1075,27 +1075,43 @@ to{
 }
 
 
-/* GOLD CIRCLE EFFECT */
+/* GOLD CIRCLE LOADER */
 
-.loader-content::before{
 
-    content:"";
+.gold-loader{
 
-    position:absolute;
+    width:90px;
 
-    width:180px;
-
-    height:180px;
-
-    border:3px solid #D4AF37;
-
-    border-top-color:transparent;
+    height:90px;
 
     border-radius:50%;
 
-    animation:spin 2s linear infinite;
+    border:5px solid rgba(212,175,55,.25);
 
-    transform:translate(-50%,-50%);
+    border-top:5px solid #D4AF37;
+
+    margin:0 auto 35px;
+
+    animation:spinGold 1.2s linear infinite;
+
+}
+
+
+@keyframes spinGold{
+
+from{
+
+    transform:rotate(0deg);
+
+}
+
+to{
+
+    transform:rotate(360deg);
+
+}
+
+}
 
 }
 
