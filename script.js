@@ -92,3 +92,38 @@ function closeImage(){
     document.body.classList.remove("viewer-open");
 
 }
+// BACK TO TOP BUTTON
+
+
+window.onscroll=function(){
+
+    let btn=document.getElementById("topButton");
+
+
+    if(document.documentElement.scrollTop > 400){
+
+        btn.style.display="block";
+
+    }
+
+    else{
+
+        btn.style.display="none";
+
+    }
+
+};
+
+
+
+function goTop(){
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+}
