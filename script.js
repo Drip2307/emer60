@@ -2,13 +2,40 @@
 
 function openInvitation(){
 
-    document.getElementById("opening").style.display = "none";
+    let opening = document.getElementById("opening");
 
-    document.getElementById("invitation").style.display = "block";
+    let invitation = document.getElementById("invitation");
+
+
+    opening.classList.add("hide");
+
+
+    setTimeout(function(){
+
+
+        opening.style.display="none";
+
+
+        invitation.style.display="block";
+
+
+        setTimeout(function(){
+
+            invitation.classList.add("show");
+
+        },50);
+
+
+    },800);
+
+
 
     window.scrollTo({
+
         top:0,
+
         behavior:"smooth"
+
     });
 
 }
