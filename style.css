@@ -280,60 +280,71 @@ button:hover{
 /* BALLOONS */
 
 
+/* PREMIUM BALLOONS */
+
+
 .balloon{
 
     position:fixed;
 
-    width:80px;
+    width:75px;
 
-    height:100px;
+    height:95px;
 
     border-radius:50%;
 
-    opacity:.35;
+    opacity:.45;
 
     z-index:-1;
 
-    animation:float 7s infinite ease-in-out;
+    animation:floatBalloon 8s infinite ease-in-out;
 
 }
 
 
-.balloon:before{
+/* balloon string */
+
+.balloon::after{
 
     content:"";
 
     position:absolute;
 
-    bottom:-15px;
+    width:2px;
+
+    height:90px;
+
+    background:#D4AF37;
 
     left:50%;
 
-    width:3px;
-
-    height:80px;
-
-    background:#D4AF37;
+    top:95px;
 
 }
 
 
+/* gold balloon */
+
 .balloon1{
 
-    background:#D4AF37;
+    background:
+    radial-gradient(circle at 30% 25%,#fff3a0,#D4AF37);
 
-    left:3%;
+    left:5%;
 
     top:15%;
 
 }
 
 
+/* white balloon */
+
 .balloon2{
 
-    background:white;
+    background:
+    radial-gradient(circle at 30% 25%,white,#d9d9d9);
 
-    right:5%;
+    right:6%;
 
     top:25%;
 
@@ -342,15 +353,37 @@ button:hover{
 }
 
 
+/* blue balloon */
+
 .balloon3{
 
-    background:#123B84;
+    background:
+    radial-gradient(circle at 30% 25%,#3d6fc4,#0A2E73);
 
     left:45%;
 
-    bottom:10%;
+    bottom:12%;
 
     animation-delay:4s;
+
+}
+
+
+
+@keyframes floatBalloon{
+
+0%,100%{
+
+transform:translateY(0) rotate(0deg);
+
+}
+
+
+50%{
+
+transform:translateY(-50px) rotate(5deg);
+
+}
 
 }
 
