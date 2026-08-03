@@ -1362,43 +1362,48 @@ transform:scale(1);
 
 #secretScreen{
 
-    display:none;
-
     position:fixed;
 
     inset:0;
+
+    display:none;
 
     justify-content:center;
 
     align-items:center;
 
-    background:rgba(8,28,69,.96);
+    padding:20px;
 
-    z-index:9500;
+    background:rgba(8,28,69,.94);
 
-    animation:fadeSecret .8s;
+    z-index:9999;
 
 }
-
 .secret-card{
 
     width:90%;
+    max-width:520px;
 
-    max-width:700px;
+    margin:auto;
 
-    padding:45px;
+    padding:40px 30px;
 
     text-align:center;
 
-    border:1px solid rgba(212,175,55,.45);
+    background:rgba(255,255,255,.08);
 
-    border-radius:25px;
+    backdrop-filter:blur(15px);
 
-    background:rgba(255,255,255,.05);
+    -webkit-backdrop-filter:blur(15px);
 
-    backdrop-filter:blur(12px);
+    border:2px solid #D4AF37;
 
-    box-shadow:0 0 40px rgba(212,175,55,.18);
+    border-radius:28px;
+
+    box-shadow:
+        0 0 30px rgba(212,175,55,.35);
+
+    animation:fadeIn .8s ease;
 
 }
 
@@ -1406,22 +1411,27 @@ transform:scale(1);
 
     color:#D4AF37;
 
-    font-size:34px;
+    font-size:36px;
 
     margin-bottom:20px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
 
 }
 
 .secret-card p{
 
-    color:white;
+    color:#fff;
 
     font-size:20px;
 
     line-height:1.8;
 
-}
+    margin:0;
 
+}
 @keyframes fadeSecret{
 
 from{
