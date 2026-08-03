@@ -158,11 +158,11 @@ function goTop(){
 
 window.addEventListener("DOMContentLoaded", function () {
 
-    setTimeout(function () {
+    const loader = document.getElementById("loader");
 
-        document.getElementById("loader").classList.add("hide");
-
-    }, 1200);
+    if(loader){
+        loader.style.display = "none";
+    }
 
 });
 // BACKGROUND MUSIC
