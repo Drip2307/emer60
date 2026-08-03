@@ -4,30 +4,35 @@ function openInvitation(){
 
     document.getElementById("opening").style.display = "none";
 
-    document.getElementById("secretScreen").style.display = "flex";
+    const secret = document.getElementById("secretScreen");
+
+    secret.style.display = "flex";
+
+    music.play();
+    playing = true;
+    musicBtn.innerHTML = "🎵";
 
     setTimeout(function(){
 
-        document.getElementById("secretScreen").style.display = "none";
+        secret.classList.add("hide-secret");
 
-        document.getElementById("invitation").style.display = "block";
+        setTimeout(function(){
 
-        window.scrollTo({
-            top:0,
-            behavior:"smooth"
-        });
+            secret.style.display = "none";
+            secret.classList.remove("hide-secret");
 
-        music.play();
-        playing = true;
-        musicBtn.innerHTML = "🎵";
+            document.getElementById("invitation").style.display = "block";
 
-    },2500);
+            window.scrollTo({
+                top:0,
+                behavior:"smooth"
+            });
+
+        },800);
+
+    },2200);
 
 }
-
-
-    
-
 // GOOGLE MAP LOCATION
 
 function openMap(){
@@ -143,13 +148,13 @@ function goTop(){
 }
 // REMOVE LOADER AFTER PAGE LOAD
 
-window.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function(){
 
-    const loader = document.getElementById("loader");
+    setTimeout(function(){
 
-    if(loader){
-        loader.style.display = "none";
-    }
+        document.getElementById("loader").classList.add("hide");
+
+    },800);
 
 });
 // BACKGROUND MUSIC
