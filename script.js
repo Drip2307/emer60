@@ -178,14 +178,13 @@ function goTop(){
 }
 // REMOVE LOADER AFTER PAGE LOAD
 
-window.addEventListener("load",function(){
+window.addEventListener("DOMContentLoaded", function () {
 
-    setTimeout(function(){
+    setTimeout(function () {
 
-        document.getElementById("loader")
-        .classList.add("hide");
+        document.getElementById("loader").classList.add("hide");
 
-    },2000);
+    }, 1200);
 
 });
 // BACKGROUND MUSIC
