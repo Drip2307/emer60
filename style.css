@@ -1286,3 +1286,36 @@ transform:scale(1);
     transform:translateY(0);
 
 }
+/* MUSIC BUTTON */
+
+#musicBtn{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    padding:0;
+
+    margin:0;
+
+    background:#D4AF37;
+
+    color:#001B4D;
+
+    border:2px solid white;
+
+    font-size:24px;
+
+    z-index:9999;
+
+    box-shadow:0 0 20px rgba(212,175,55,.5);
+
+}
