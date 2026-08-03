@@ -5,31 +5,42 @@ function openInvitation(){
     document.getElementById("opening").style.display = "none";
 
     const secret = document.getElementById("secretScreen");
-    const invitation = document.getElementById("invitation");
 
     secret.style.display = "flex";
 
     music.play();
+
     playing = true;
-    musicBtn.innerHTML = "🎵";
 
-    setTimeout(function(){
+    musicBtn.textContent = "🎵";
 
-        secret.style.opacity = "0";
+    confetti({
 
-        setTimeout(function(){
+        particleCount:120,
+
+        spread:90,
+
+        origin:{y:.6},
+
+        colors:[
+            "#D4AF37",
+            "#FFD700",
+            "#FFF8DC"
+        ]
+
+    });
+
+    setTimeout(() => {
+
+        secret.classList.add("hide");
+
+        setTimeout(() => {
 
             secret.style.display = "none";
-            secret.style.opacity = "1";
 
-            invitation.style.display = "block";
-            invitation.style.opacity = "1";
-            invitation.style.visibility = "visible";
+            secret.classList.remove("hide");
 
-            window.scrollTo({
-                top:0,
-                behavior:"smooth"
-            });
+            document.getElementById("invitation").style.display = "block";
 
         },800);
 
@@ -150,14 +161,15 @@ function goTop(){
 
 }
 // REMOVE LOADER AFTER PAGE LOAD
+window.addEventListener("load", () => {
 
-window.addEventListener("load", function(){
+    const loader = document.getElementById("loader");
 
-    setTimeout(function(){
+    setTimeout(() => {
 
-        document.getElementById("loader").classList.add("hide");
+        loader.classList.add("hide");
 
-    },800);
+    }, 800);
 
 });
 // BACKGROUND MUSIC
