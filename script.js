@@ -2,45 +2,17 @@
 
 function openInvitation(){
 
-    // Gold Confetti
-    confetti({
+    document.getElementById("opening").style.display = "none";
 
-        particleCount:120,
-        spread:90,
-        origin:{y:0.6},
-        colors:[
-            "#D4AF37",
-            "#FFD700",
-            "#FFF8DC",
-            "#C5A028"
-        ]
-
-    });
-
-    document.getElementById("opening").style.display="none";
-
-    document.getElementById("secretScreen").style.display="flex";
-
-    music.play();
-
-    playing=true;
-
-    musicBtn.innerHTML="🎵";
+    document.getElementById("secretScreen").style.display = "flex";
 
     setTimeout(function(){
 
-        document.getElementById("secretScreen").style.display="none";
+        document.getElementById("secretScreen").style.display = "none";
 
-        document.getElementById("invitation").style.display="block";
+        document.getElementById("invitation").style.display = "block";
 
-        window.scrollTo({
-
-            top:0,
-            behavior:"smooth"
-
-        });
-
-    },2500);
+    }, 2500);
 
 }
 
