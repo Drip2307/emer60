@@ -8,7 +8,25 @@ function openInvitation(){
 
 
     opening.classList.add("hide");
+    /* GOLD CONFETTI */
 
+confetti({
+
+    particleCount:120,
+
+    spread:90,
+
+    origin:{y:0.6},
+
+    colors:[
+        "#D4AF37",
+        "#FFD700",
+        "#FFF8DC",
+        "#C5A028"
+    ]
+
+});
+    
 
     setTimeout(function(){
 
