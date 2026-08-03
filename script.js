@@ -33,7 +33,7 @@ function openInvitation(){
 
         },800);
 
-    },5000);
+    },5500);
 
 }
 // GOOGLE MAP LOCATION
