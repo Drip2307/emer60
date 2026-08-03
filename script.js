@@ -26,20 +26,7 @@ function openInvitation(){
 }
 
 
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
-    });
-music.play();
-
-playing = true;
-
-musicBtn.innerHTML = "🎵";
-}
-
+    
 
 // GOOGLE MAP LOCATION
 
