@@ -37,7 +37,11 @@ function openInvitation(){
         behavior:"smooth"
 
     });
+music.play();
 
+playing = true;
+
+musicBtn.innerHTML = "🎵";
 }
 
 
