@@ -2,50 +2,47 @@
 
 function openInvitation(){
 
-    let opening = document.getElementById("opening");
+    // Gold Confetti
+    confetti({
 
-    let invitation = document.getElementById("invitation");
+        particleCount:120,
+        spread:90,
+        origin:{y:0.6},
+        colors:[
+            "#D4AF37",
+            "#FFD700",
+            "#FFF8DC",
+            "#C5A028"
+        ]
 
+    });
 
-    opening.classList.add("hide");
-    /* GOLD CONFETTI */
+    document.getElementById("opening").style.display="none";
 
-confetti({
+    document.getElementById("secretScreen").style.display="flex";
 
-    particleCount:120,
+    music.play();
 
-    spread:90,
+    playing=true;
 
-    origin:{y:0.6},
-
-    colors:[
-        "#D4AF37",
-        "#FFD700",
-        "#FFF8DC",
-        "#C5A028"
-    ]
-
-});
-    
+    musicBtn.innerHTML="🎵";
 
     setTimeout(function(){
 
+        document.getElementById("secretScreen").style.display="none";
 
-        opening.style.display="none";
+        document.getElementById("invitation").style.display="block";
 
+        window.scrollTo({
 
-        invitation.style.display="block";
+            top:0,
+            behavior:"smooth"
 
+        });
 
-        setTimeout(function(){
+    },2500);
 
-            invitation.classList.add("show");
-
-        },50);
-
-
-    },800);
-
+}
 
 
     window.scrollTo({
