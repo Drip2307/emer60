@@ -5,6 +5,7 @@ function openInvitation(){
     document.getElementById("opening").style.display = "none";
 
     const secret = document.getElementById("secretScreen");
+    const invitation = document.getElementById("invitation");
 
     secret.style.display = "flex";
 
@@ -14,14 +15,16 @@ function openInvitation(){
 
     setTimeout(function(){
 
-        secret.classList.add("hide-secret");
+        secret.style.opacity = "0";
 
         setTimeout(function(){
 
             secret.style.display = "none";
-            secret.classList.remove("hide-secret");
+            secret.style.opacity = "1";
 
-            document.getElementById("invitation").style.display = "block";
+            invitation.style.display = "block";
+            invitation.style.opacity = "1";
+            invitation.style.visibility = "visible";
 
             window.scrollTo({
                 top:0,
