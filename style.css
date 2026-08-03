@@ -1358,53 +1358,84 @@ transform:scale(1);
     box-shadow:0 0 20px rgba(212,175,55,.5);
 
 }
-/* SECRET MESSAGE */
+/* SECRET SCREEN */
 
-.secret-message{
+#secretScreen{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(8,28,69,.96);
+
+    z-index:9500;
+
+    animation:fadeSecret .8s;
+
+}
+
+.secret-card{
 
     width:90%;
+
     max-width:700px;
 
-    margin:50px auto;
-
-    padding:35px;
-
-    background:rgba(255,255,255,.05);
-
-    border:1px solid rgba(212,175,55,.45);
-
-    border-radius:18px;
-
-    backdrop-filter:blur(12px);
+    padding:45px;
 
     text-align:center;
 
-    box-shadow:0 0 30px rgba(212,175,55,.12);
+    border:1px solid rgba(212,175,55,.45);
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 0 40px rgba(212,175,55,.18);
 
 }
 
-.secret-message h2{
+.secret-card h2{
 
     color:#D4AF37;
 
-    font-family:"Playfair Display",serif;
+    font-size:34px;
 
-    font-size:30px;
-
-    margin-bottom:18px;
-
-    font-weight:600;
+    margin-bottom:20px;
 
 }
 
-.secret-message p{
+.secret-card p{
 
-    color:#F5F5F5;
+    color:white;
 
-    font-size:18px;
+    font-size:20px;
 
     line-height:1.8;
 
-    letter-spacing:.4px;
+}
+
+@keyframes fadeSecret{
+
+from{
+
+opacity:0;
+transform:scale(.95);
+
+}
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
 
 }
