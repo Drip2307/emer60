@@ -166,3 +166,29 @@ window.addEventListener("load",function(){
     },2000);
 
 });
+// BACKGROUND MUSIC
+
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+let playing = false;
+
+function toggleMusic(){
+
+    if(playing){
+
+        music.pause();
+
+        musicBtn.innerHTML = "🔇";
+
+    }else{
+
+        music.play();
+
+        musicBtn.innerHTML = "🎵";
+
+    }
+
+    playing = !playing;
+
+}
