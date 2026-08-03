@@ -12,7 +12,16 @@ function openInvitation(){
 
         document.getElementById("invitation").style.display = "block";
 
-    }, 2500);
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+        music.play();
+        playing = true;
+        musicBtn.innerHTML = "🎵";
+
+    },2500);
 
 }
 
