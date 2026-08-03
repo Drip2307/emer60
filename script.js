@@ -100,29 +100,19 @@ setInterval(function(){
 
 
 },1000);
-function openImage(image){
+function openImage(img){
 
-    let viewer=document.getElementById("imageViewer");
+    const viewer = document.getElementById("imageViewer");
 
-    let fullImage=document.getElementById("fullImage");
+    document.getElementById("fullImage").src = img.src;
 
-
-    fullImage.src=image.src;
-
-    viewer.style.display="flex";
-
-
-    document.body.style.overflow="hidden";
+    viewer.style.display = "flex";
 
 }
 
-
-
 function closeImage(){
 
-    document.getElementById("imageViewer").style.display="none";
-
-    document.body.style.overflow="auto";
+    document.getElementById("imageViewer").style.display = "none";
 
 }
 // BACK TO TOP BUTTON
