@@ -2,307 +2,88 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:"Georgia", serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
 
-    background:
-    radial-gradient(circle at top,#16458f,#00163d);
+    font-family:Georgia, serif;
 
-    color:white;
+    background:linear-gradient(180deg,#081C45,#0F2E73,#081C45);
+
+    color:#fff;
+
     overflow-x:hidden;
+
+    min-height:100vh;
+
+    position:relative;
 
 }
 
-body.viewer-open{
+/* ===========================
+   SPARKLES
+=========================== */
+
+.sparkles{
+
+    position:fixed;
+    inset:0;
+
+    pointer-events:none;
 
     overflow:hidden;
 
 }
-/* OPENING */
 
-#opening{
+.sparkles span{
 
-    min-height:100vh;
+    position:absolute;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    padding:25px;
-
-}
-
-
-.opening-card{
-
-    background:
-    linear-gradient(
-    145deg,
-    rgba(255,255,255,.12),
-    rgba(255,255,255,.04)
-    );
-
-    backdrop-filter:blur(15px);
-
-    border:2px solid #D4AF37;
-
-    border-radius:30px;
-
-    padding:55px 35px;
-
-    max-width:550px;
-
-    width:95%;
-
-    box-shadow:
-    0 0 50px rgba(212,175,55,.45);
-
-    animation:fadeIn 1.2s ease;
-
-}
-
-
-.opening-card h1{
-
-    color:#D4AF37;
-
-    font-size:50px;
-
-    text-transform:uppercase;
-
-    letter-spacing:3px;
-
-    margin-bottom:15px;
-
-}
-
-
-.opening-card h2{
-
-    font-size:28px;
-
-    font-weight:normal;
-
-    margin-bottom:25px;
-
-}
-
-
-.opening-card p{
-
-    font-size:20px;
-
-    line-height:1.8;
-
-    color:#fff;
-
-}
-
-
-
-/* BUTTON */
-
-button{
-
-    margin-top:30px;
-
-    padding:16px 45px;
-
-    border-radius:50px;
-
-    border:2px solid #D4AF37;
+    width:4px;
+    height:4px;
 
     background:#D4AF37;
 
-    color:#001B4D;
+    border-radius:50%;
 
-    font-size:18px;
-
-    font-weight:bold;
-
-    cursor:pointer;
-
-    transition:.4s;
+    animation:twinkle 5s linear infinite;
 
 }
 
-
-button:hover{
-
-    background:transparent;
-
-    color:#D4AF37;
-
-    transform:translateY(-5px);
-
-}
-
-
-
-/* MAIN INVITATION */
-
-
-#invitation{
-
-    padding:45px 15px;
-
-}
-
-
-.container{
-
-    width:100%;
-
-    max-width:950px;
-
-    margin:auto;
-
-    text-align:center;
-
-}
-
-
-
-.container h1{
-
-    color:#D4AF37;
-
-    font-size:38px;
-
-    letter-spacing:2px;
-
-    margin-bottom:35px;
-
-}
-
-
-
-/* INVITATION IMAGE */
-
-
-.invite-card{
-
-    width:98%;
-
-    max-width:900px;
-
-    border-radius:25px;
-
-    border:4px solid #D4AF37;
-
-    background:white;
-
-    padding:6px;
-
-    box-shadow:
-
-    0 0 25px rgba(212,175,55,.5),
-
-    0 0 70px rgba(212,175,55,.2);
-
-    animation:cardZoom 1s ease;
-
-    transition:.5s;
-
-}
-
-
-.invite-card:hover{
-
-    transform:scale(1.02);
-
-}
-
-
-.back{
-
-    margin-top:45px;
-
-}
-
-
-
-/* DETAILS */
-
-
-.details{
-
-    margin:35px auto;
-
-    padding:30px;
-
-    max-width:600px;
-
-    background:
-
-    rgba(255,255,255,.08);
-
-    backdrop-filter:blur(10px);
-
-    border-radius:25px;
-
-    border:1px solid #D4AF37;
-
-    font-size:20px;
-
-    line-height:2;
-
-}
-
-
-
-/* COUNTDOWN */
-
-
-#countdown{
-    width:95%;
-    max-width:600px;
-    margin:35px auto;
-    text-align:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-#countdown::before{
-    content:"";
-}
-
-#countdown{
-    letter-spacing:1px;
-}
-
-
-
-/* BALLOONS */
-
-
-/* PREMIUM BALLOONS */
-
+.sparkles span:nth-child(1){top:10%;left:15%;}
+.sparkles span:nth-child(2){top:20%;left:80%;}
+.sparkles span:nth-child(3){top:35%;left:45%;}
+.sparkles span:nth-child(4){top:60%;left:12%;}
+.sparkles span:nth-child(5){top:70%;left:75%;}
+.sparkles span:nth-child(6){top:82%;left:50%;}
+.sparkles span:nth-child(7){top:42%;left:90%;}
+.sparkles span:nth-child(8){top:15%;left:60%;}
+
+/* ===========================
+   BALLOONS
+=========================== */
 
 .balloon{
 
     position:fixed;
 
-    width:75px;
+    bottom:-180px;
 
-    height:95px;
+    width:70px;
+
+    height:90px;
 
     border-radius:50%;
 
-    opacity:.45;
+    opacity:.15;
 
-    z-index:-1;
-
-    animation:floatBalloon 8s infinite ease-in-out;
+    animation:float 15s linear infinite;
 
 }
-
-
-/* balloon string */
 
 .balloon::after{
 
@@ -312,1147 +93,78 @@ button:hover{
 
     width:2px;
 
-    height:90px;
+    height:120px;
 
     background:#D4AF37;
 
     left:50%;
 
-    top:95px;
+    top:90px;
 
 }
-
-
-/* gold balloon */
 
 .balloon1{
 
-    background:
-    radial-gradient(circle at 30% 25%,#fff3a0,#D4AF37);
-
-    left:5%;
-
-    top:15%;
-
-}
-
-
-/* white balloon */
-
-.balloon2{
-
-    background:
-    radial-gradient(circle at 30% 25%,white,#d9d9d9);
-
-    right:6%;
-
-    top:25%;
-
-    animation-delay:2s;
-
-}
-
-
-/* blue balloon */
-
-.balloon3{
-
-    background:
-    radial-gradient(circle at 30% 25%,#3d6fc4,#0A2E73);
-
-    left:45%;
-
-    bottom:12%;
-
-    animation-delay:4s;
-
-}
-
-
-
-@keyframes floatBalloon{
-
-0%,100%{
-
-transform:translateY(0) rotate(0deg);
-
-}
-
-
-50%{
-
-transform:translateY(-50px) rotate(5deg);
-
-}
-
-}
-
-
-
-/* ANIMATIONS */
-
-
-@keyframes float{
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-
-50%{
-
-transform:translateY(-45px);
-
-}
-
-}
-
-
-@keyframes fadeIn{
-
-from{
-
-opacity:0;
-
-transform:translateY(30px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-
-@keyframes cardZoom{
-
-from{
-
-opacity:0;
-
-transform:scale(.85);
-
-}
-
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-}
-
-
-
-/* MOBILE */
-
-
-@media(max-width:600px){
-
-
-.opening-card h1{
-
-font-size:38px;
-
-}
-
-
-.opening-card h2{
-
-font-size:22px;
-
-}
-
-
-.container h1{
-
-font-size:28px;
-
-}
-
-
-.invite-card{
-
-width:100%;
-
-}
-
-
-#countdown{
-
-font-size:20px;
-
-}
-
-}}
-
-
-/* INVITATION PAGE */
-
-
-#invitation{
-
-    min-height:100vh;
-
-    padding:40px 15px;
-
-}
-
-
-.container{
-
-    max-width:900px;
-
-    margin:auto;
-
-    text-align:center;
-
-}
-
-
-.container h1{
-
-    color:#D4AF37;
-
-    margin-bottom:30px;
-
-    font-size:32px;
-
-}
-
-
-/* LARGE INVITATION IMAGE */
-
-
-.invite-card{
-
-    width:98%;
-
-    max-width:850px;
-
-    border-radius:20px;
-
-    border:3px solid #D4AF37;
-
-    box-shadow:
-
-    0 0 40px rgba(212,175,55,.5);
-
-    margin-bottom:35px;
-
-    animation:zoom .8s ease;
-
-}
-
-
-.back{
-
-    margin-top:40px;
-
-}
-
-
-/* DETAILS */
-
-
-.details{
-
-    background:rgba(255,255,255,.08);
-
-    border:1px solid #D4AF37;
-
-    border-radius:20px;
-
-    padding:25px;
-
-    font-size:20px;
-
-    line-height:1.8;
-
-}
-
-
-/* COUNTDOWN */
-
-
-#countdown{
-
-    margin:35px 0;
-
-    padding:20px;
-
-    background:rgba(255,255,255,.08);
-
-    border-radius:20px;
-
-    border:1px solid #D4AF37;
-
-    color:#D4AF37;
-
-    font-size:28px;
-
-}
-
-
-/* BALLOONS */
-
-
-.balloon{
-
-    position:fixed;
-
-    width:90px;
-
-    height:120px;
-
-    border-radius:50%;
-
-    z-index:-1;
-
-    opacity:.45;
-
-    animation:float 6s infinite ease-in-out;
-
-}
-
-
-.balloon:after{
-
-    content:"";
-
-    position:absolute;
-
-    width:2px;
-
-    height:120px;
+    left:10%;
 
     background:#D4AF37;
 
-    bottom:-120px;
+}
+
+.balloon2{
 
     left:50%;
 
-}
+    animation-delay:5s;
 
-
-.balloon1{
-
-    background:#D4AF37;
-
-    left:5%;
-
-    top:10%;
+    background:#d6d6d6;
 
 }
-
-
-.balloon2{
-
-    background:#FFFFFF;
-
-    right:5%;
-
-    top:20%;
-
-    animation-delay:2s;
-
-}
-
 
 .balloon3{
 
-    background:#0A2E73;
+    right:10%;
 
-    left:45%;
-
-    bottom:10%;
-
-    animation-delay:4s;
-
-}
-
-
-
-@keyframes float{
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-
-50%{
-
-transform:translateY(-40px);
-
-}
-
-}
-
-
-
-@keyframes zoom{
-
-from{
-
-opacity:0;
-
-transform:scale(.8);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-}
-
-
-
-@media(max-width:600px){opacity:0;
-transform:translateY(20px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-@media(max-width:768px){
-
-#welcome h1{
-font-size:34px;
-}
-
-#welcome h2{
-font-size:28px;
-}
-
-button{
-width:100%;
-}
-
-#countdown{
-font-size:22px;
-}
-
-}
-/* PREMIUM INVITATION REVEAL */
-
-#invitation{
-    animation: revealPage 1.2s ease;
-}
-
-
-@keyframes revealPage{
-
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-}
-
-
-/* GOLD SHINE EFFECT SA TITLE */
-
-.container h1{
-
-    position:relative;
-
-}
-
-
-.container h1::after{
-
-    content:"";
-
-    display:block;
-
-    width:120px;
-
-    height:3px;
+    animation-delay:9s;
 
     background:#D4AF37;
 
-    margin:15px auto 0;
-
-    border-radius:20px;
-
 }
 
-
-/* MAS LUXURY NA IMAGE EFFECT */
-
-.invite-card{
-
-    cursor:pointer;
-
-}
-
-
-.invite-card:active{
-
-    transform:scale(.98);
-
-}
-/* PREMIUM IMAGE GALLERY */
-
-
-#imageViewer{
-
-    display:none;
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:100vw;
-
-    height:100vh;
-
-    background:rgba(0,0,0,.94);
-
-    z-index:99999;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:20px;
-
-}
-
-
-
-#fullImage{
-
-    max-width:95vw;
-
-    max-height:90vh;
-
-    object-fit:contain;
-
-    border:3px solid #D4AF37;
-
-    border-radius:20px;
-
-    animation:imageZoom .5s ease;
-
-}
-
-
-
-#closeViewer{
-
-    position:absolute;
-
-    top:20px;
-
-    right:20px;
-
-    width:50px;
-
-    height:50px;
-
-    padding:0;
-
-    margin:0;
-
-    border-radius:50%;
-
-    background:#D4AF37;
-
-    color:#00163d;
-
-    font-size:35px;
-
-    line-height:40px;
-
-    z-index:100000;
-
-}
-
-
-
-@keyframes imageZoom{
-
-from{
-
-    transform:scale(.7);
-
-    opacity:0;
-
-}
-
-
-to{
-
-    transform:scale(1);
-
-    opacity:1;
-
-}
-
-}
-
-
-#imageViewer img{
-
-    max-width:95vw;
-
-    max-height:90vh;
-
-    object-fit:contain;
-
-    border:3px solid #D4AF37;
-
-    border-radius:15px;
-
-    box-shadow:0 0 40px rgba(212,175,55,.6);
-
-    animation:viewerZoom .4s ease;
-
-}
-
-
-@keyframes viewerZoom{
-
-from{
-
-transform:scale(.7);
-
-opacity:0;
-
-}
-
-to{
-
-transform:scale(1);
-
-opacity:1;
-
-}
-
-}
-/* LUXURY OPENING EFFECT */
-
-
-.opening-card{
-
-    animation:
-    luxuryEnter 1.5s ease,
-    softGlow 3s infinite alternate;
-
-}
-
-
-
-.opening-card h1{
-
-    animation:titleGlow 2s infinite alternate;
-
-}
-
-
-
-@keyframes luxuryEnter{
-
-from{
-
-    opacity:0;
-
-    transform:
-    scale(.85)
-    translateY(40px);
-
-}
-
-
-to{
-
-    opacity:1;
-
-    transform:
-    scale(1)
-    translateY(0);
-
-}
-
-}
-
-
-
-@keyframes softGlow{
-
-from{
-
-    box-shadow:
-    0 0 30px rgba(212,175,55,.3);
-
-}
-
-
-to{
-
-    box-shadow:
-    0 0 70px rgba(212,175,55,.7);
-
-}
-
-}
-
-
-
-@keyframes titleGlow{
-
-from{
-
-    text-shadow:
-    0 0 5px #D4AF37;
-
-}
-
-
-to{
-
-    text-shadow:
-    0 0 25px #D4AF37;
-
-}
-
-}
-/* BACK TO TOP BUTTON */
-
-
-#topButton{
-
-    display:none;
-
-    position:fixed;
-
-    bottom:25px;
-
-    right:25px;
-
-    width:55px;
-
-    height:55px;
-
-    border-radius:50%;
-
-    padding:0;
-
-    margin:0;
-
-    background:#D4AF37;
-
-    color:#001B4D;
-
-    border:2px solid white;
-
-    font-size:28px;
-
-    z-index:1000;
-
-    box-shadow:
-    0 0 25px rgba(212,175,55,.6);
-
-}
-
-
-#topButton:hover{
-
-    transform:scale(1.1);
-
-}
-/* LUXURY LOADER FIX */
-
-#loader{
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100vw;
-    height:100vh;
-
-    background:#00163d;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    z-index:99999;
-
-    opacity:1;
-
-    transition:opacity 1s ease, visibility 1s ease;
-
-}
-
-
-.loader-content{
-
-    animation:loaderAppear 1s ease;
-
-}
-
-
-.loader-content h1{
-
-    color:#D4AF37;
-
-    font-size:45px;
-
-    text-transform:uppercase;
-
-    letter-spacing:4px;
-
-    text-shadow:
-    0 0 15px #D4AF37;
-
-}
-
-
-.loader-content{
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-}
-
-
-/* GOLD CIRCLE LOADER */
-
-
-.gold-loader{
-
-    width:55px;
-
-    height:55px;
-
-    border-radius:50%;
-
-    border:4px solid rgba(212,175,55,.25);
-
-    border-top:4px solid #D4AF37;
-
-    margin:0 auto 25px;
-
-    animation:spinGold 1.2s linear infinite;
-
-}
-
-@keyframes spinGold{
-
-from{
-
-    transform:rotate(0deg);
-
-}
-
-to{
-
-    transform:rotate(360deg);
-
-}
-
-}
-
-}
-
-
-
-@keyframes spin{
-
-from{
-
-transform:rotate(0deg);
-
-}
-
-to{
-
-transform:rotate(360deg);
-
-}
-
-}
-
-
-
-@keyframes loaderAppear{
-
-from{
-
-opacity:0;
-
-transform:scale(.8);
-
-}
-
-to{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-}
-#loader.hide{
-
-    opacity:0;
-
-    visibility:hidden;
-
-}
-/* SMOOTH INVITATION TRANSITION */
-
+/* ===========================
+   OPENING
+=========================== */
 
 #opening{
 
-    transition:
-    opacity .8s ease,
-    transform .8s ease;
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
 
 }
 
+.opening-card{
 
-#opening.hide{
+    width:100%;
 
-    opacity:0;
+    max-width:560px;
 
-    transform:scale(.95);
-
-    pointer-events:none;
-
-}
-
-
-
-#invitation{
-
-    opacity:0;
-
-    transform:translateY(30px);
-
-    transition:
-    opacity 1s ease,
-    transform 1s ease;
-
-}
-
-
-#invitation.show{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
-/* MUSIC BUTTON */
-
-#musicBtn{
-
-    position:fixed;
-
-    top:20px;
-
-    right:20px;
-
-    width:55px;
-
-    height:55px;
-
-    border-radius:50%;
-
-    padding:0;
-
-    margin:0;
-
-    background:#D4AF37;
-
-    color:#001B4D;
-
-    border:2px solid white;
-
-    font-size:24px;
-
-    z-index:9999;
-/* GOLD SPARKLES */
-
-.sparkles{
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    overflow:hidden;
-    z-index:-1;
-}
-
-.sparkles span{
-    position:absolute;
-    width:4px;
-    height:4px;
-    background:#D4AF37;
-    border-radius:50%;
-    box-shadow:0 0 10px #D4AF37;
-    animation:twinkle 5s linear infinite;
-}
-
-/* Position ng bawat sparkle */
-.sparkles span:nth-child(1){top:10%;left:15%;animation-delay:0s;}
-.sparkles span:nth-child(2){top:25%;left:80%;animation-delay:1s;}
-.sparkles span:nth-child(3){top:40%;left:35%;animation-delay:2s;}
-.sparkles span:nth-child(4){top:60%;left:70%;animation-delay:3s;}
-.sparkles span:nth-child(5){top:75%;left:20%;animation-delay:4s;}
-.sparkles span:nth-child(6){top:85%;left:55%;animation-delay:2.5s;}
-.sparkles span:nth-child(7){top:15%;left:55%;animation-delay:1.5s;}
-.sparkles span:nth-child(8){top:50%;left:90%;animation-delay:3.5s;}
-
-@keyframes twinkle{
-    0%,100%{
-        opacity:.2;
-        transform:scale(.5);
-    }
-    50%{
-        opacity:1;
-        transform:scale(1.5);
-    }
-}
-    box-shadow:0 0 20px rgba(212,175,55,.5);
-
-}
-/* SECRET SCREEN */
-
-#secretScreen{
-
-    position:fixed !important;
-    inset:0 !important;
-
-    display:flex !important;
-
-    justify-content:center !important;
-    align-items:center !important;
-
-    background:rgba(8,28,69,.94) !important;
-
-    z-index:9999 !important;
-
-    padding:20px !important;
-
-}
-.secret-card{
-
-    width:90%;
-    max-width:520px;
-
-    margin:auto;
-
-    padding:40px 30px;
+    padding:50px 35px;
 
     text-align:center;
+
+    border:2px solid #D4AF37;
+
+    border-radius:30px;
 
     background:rgba(255,255,255,.08);
 
     backdrop-filter:blur(15px);
 
-    -webkit-backdrop-filter:blur(15px);
-
-    border:2px solid #D4AF37;
-
-    border-radius:28px;
-
-    box-shadow:
-        0 0 30px rgba(212,175,55,.35);
-
-    animation:fadeIn .8s ease;
-
-}
-
-.secret-card h2{
-
-    color:#D4AF37;
-
-    font-size:36px;
-
-    margin-bottom:20px;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-}
-
-.secret-card p{
-
-    color:#fff;
-
-    font-size:20px;
-
-    line-height:1.8;
-
-    margin:0;
-
-}
-@keyframes fadeSecret{
-
-from{
-
-opacity:0;
-transform:scale(.95);
-
-}
-
-to{
-
-opacity:1;
-transform:scale(1);
-
-}
-
-}
-#secretScreen{
-    opacity:1;
-    transition:opacity .8s ease;
-}
-
-#secretScreen.hide-secret{
-    opacity:0;
-    pointer-events:none;
-}
+    box-shadow:0 
